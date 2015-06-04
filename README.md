@@ -1,28 +1,34 @@
-== README
+# Capistrano 3 Rails Config
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
 
-Things you may want to cover:
+This is a sample configuration for deploying Ruby on Rails applications with Capistrano 3.1 including Zero Downtime Deployment with Unicorn and Sidekiq background Workers.
 
-* Ruby version
+## Usage
 
-* System dependencies
+See
+<http://www.talkingquickly.co.uk/2014/01/deploying-rails-apps-to-a-vps-with-capistrano-v3/>
+for a tutorial on usage.
 
-* Configuration
+Or for more details, this is also the example configuration used in the
+book Reliably Deploying Rails Applications available on Leanpub:
+<https://leanpub.com/deploying_rails_applications>
 
-* Database creation
+## Minimal Requirements
 
-* Database initialization
+You should have the following in your Gemfile:
 
-* How to run the test suite
+    gem 'capistrano', '~> 3.1.0'
 
-* Services (job queues, cache servers, search engines, etc.)
+    # rails specific capistrano funcitons
+    gem 'capistrano-rails', '~> 1.1.0'
 
-* Deployment instructions
+    # integrate bundler with capistrano
+    gem 'capistrano-bundler'
 
-* ...
+    # if you are using RBENV
+    gem 'capistrano-rbenv', "~> 2.0" 
 
+    # Use Unicorn as our app server
+    gem 'unicorn'
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
