@@ -32,9 +32,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
-gem 'capistrano-rbenv', "~> 2.0"
+gem 'capistrano'
+
 gem 'unicorn'
 
 # Use Capistrano for deployment

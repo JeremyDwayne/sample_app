@@ -1,5 +1,5 @@
 set :stage, :production
-set :branch, "master"
+set :branch, ENV["REVISION"] || ENV["BRANCH_NAME"] || "master"
 
 # This is used in the Nginx VirtualHost to specify which domains
 # the app should appear on. If you don't yet have DNS setup, you'll
@@ -11,7 +11,7 @@ set :server_name, "ts.jeremydwayne.com"
 # at filepaths
 set :full_app_name, "#{fetch(:application)}_#{fetch(:stage)}"
 
-server 'ts.jeremydwayne.com', user: 'deploy', roles: %w{web app db}, primary: true
+server 'ts.jeremydwayne.com', user: 'deployer', roles: %w{web app db}, primary: true
 
 set :deploy_to, "/home/#{fetch(:deploy_user)}/apps/#{fetch(:full_app_name)}"
 
