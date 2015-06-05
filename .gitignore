@@ -17,5 +17,7 @@
 /tmp
 
 # Ignore
+/spring/*.pid
 /config/database.yml
 /config/secrets.yml
+/public/uploads
