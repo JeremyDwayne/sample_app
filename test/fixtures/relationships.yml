@@ -1,1 +1,15 @@
-# empty
+one:
+    follower: jeremy
+    followed: lana
+
+two:
+    follower: jeremy
+    followed: mallory
+
+three:
+    follower: lana
+    followed: jeremy
+
+four:
+    follower: archer
+    followed: jeremy
